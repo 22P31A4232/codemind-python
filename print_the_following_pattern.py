@@ -1,8 +1,9 @@
-a=int(input())
-for i in range(1,a+1):
-    for j in range(1,a+1):
-        if(i==j or j==a-i+1):
-            print('x',end="")
-        else:
-            print('0',end="")
+row = int(input())
+for i in range(1,row+1):
+    for j in range(1, row+1-i):
+        print(' ', end='')
+    for j in range(1,i+1):
+        print(i, end='')
+    for j in range(i-1,0,-1):
+        print(i, end='')
     print()
